@@ -1,0 +1,6 @@
+,
+         {
+            test: /\.(sc|sa|c)ss$/,
+            loader: 'css-loader',
+            exclude: /node_modules/,
+         }
