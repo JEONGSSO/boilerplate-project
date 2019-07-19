@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
+    "axios": "^0.19.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.11.1"
@@ -40,7 +41,10 @@
     "build": "webpack --config webpack.config.prod.js",
     "dev": "webpack-dev-server --hot --config webpack.config.dev.js",
     "test": "jest",
-    "storybook": "start-storybook -p 9000 -c .storybook"
+    "storybook": "start-storybook -p 9000 -c .storybook",
+    "next": "next dev",
+    "next-build": "next build",
+    "next-start": "next start"
   },
   "jest": {
     "setupFilesAfterEnv": [
