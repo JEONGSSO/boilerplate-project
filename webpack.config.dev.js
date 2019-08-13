@@ -3,8 +3,8 @@ const baseConfig = require('./webpack.config.base')
 
 module.exports = Merge(baseConfig, {
    mode: 'development',
+   devtool: 'inline-source-map',
    devServer: {
       port: 9999,
-   },
-   devtool: "source-map"
+   }
 })
