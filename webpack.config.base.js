@@ -17,6 +17,12 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        use: {
+          loader: 'url-loader?limit=100000'
+        }
+      },
+      {
         test: /\.(sc|sa|c)ss$/,
         use: [
           {
@@ -26,12 +32,14 @@ module.exports = {
               reloadAll: true
             }
           },
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ],
         exclude: /node_modules/
       }
     ]
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'
