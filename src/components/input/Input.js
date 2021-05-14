@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import './input.scss';
+
 export default ({ name }) => {
   const [value, setValue] = useState('');
 
@@ -11,7 +13,7 @@ export default ({ name }) => {
     <>
       <input
         type="text"
-        name="inp"
+        name="input"
         defaultValue={value}
         onKeyUp={keyUpHanlder}
         data-testid="input"

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import './counter.scss';
+
 export default () => {
   const [count, setCount] = useState(0);
 

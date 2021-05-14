@@ -1,5 +1,7 @@
 ## React Version
 
-- Jest
-- StoryBook
 - Webpack 5
+- Jest
+- Testing Library React
+- StoryBook
+- Scss

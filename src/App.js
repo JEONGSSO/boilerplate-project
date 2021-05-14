@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Body from './components/Body';
-import Counter from './components/counter/Counter';
+import { Input } from './components/input';
+import { Counter } from './components/counter';
 
 export default () => (
   <>
-    <Body name={'good'} />
+    <Input name={'good'} />
     <Counter />
   </>
 );
