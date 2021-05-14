@@ -1,9 +1,11 @@
 import React from 'react';
 
 import Body from './components/Body';
+import Counter from './components/counter/Counter';
 
 export default () => (
-  <div>
+  <>
     <Body name={'good'} />
-  </div>
+    <Counter />
+  </>
 );

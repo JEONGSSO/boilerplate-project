@@ -6,6 +6,7 @@
   "scripts": {
     "storybook": "start-storybook -p 9000 -c .storybook",
     "test": "jest",
+    "tc": "jest --coverage",
     "dev": "webpack serve --mode development",
     "build": "webpack --mode=production"
   },
@@ -25,11 +26,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
+    "@babel/plugin-transform-runtime": "^7.14.2",
     "@babel/preset-env": "^7.14.1",
     "@babel/preset-react": "^7.13.13",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@storybook/builder-webpack5": "^6.3.0-alpha.24",
     "@storybook/react": "^6.3.0-alpha.24",
+    "@testing-library/react": "^11.2.6",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^5.2.4",
