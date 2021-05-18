@@ -1,7 +1,7 @@
-## React Version
-
-- Webpack 5
+- React
+- React Router
 - Jest
 - Testing Library React
 - StoryBook
+- Webpack 5
 - Scss
