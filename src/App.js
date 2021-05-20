@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import { Header } from './layout';
 
-import routes from './routes';
+import routes from '@src/routes';
 
 export default () => (
   <Router>
     <Header />
-    <main data-testid={'main'}>
+    <main>
       {routes.map((route) => (
         <Route key={route.name} {...route} />
       ))}

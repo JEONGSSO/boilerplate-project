@@ -1,31 +1,27 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 
 import { Counter } from '../index';
 
-describe.skip('카운터 앱', () => {
-  let mountedComponent;
-
+describe('카운터 앱', () => {
   beforeEach(() => {
-    mountedComponent = render(<Counter />);
+    render(<Counter />);
   });
 
   it('increment Click Event Call', () => {
-    const { getByText, getByTestId } = mountedComponent;
-    const increButton = getByText('+');
+    const increButton = screen.getByText('+');
 
     fireEvent.click(increButton);
-    const label = getByTestId('value');
+    const label = screen.getByRole('display-count');
 
     expect(Number(label.textContent)).toBe(1);
   });
 
   it('increment Click Event Call', () => {
-    const { getByText, getByTestId } = mountedComponent;
-    const increButton = getByText('-');
+    const increButton = screen.getByText('-');
 
     fireEvent.click(increButton);
-    const label = getByTestId('value');
+    const label = screen.getByRole('display-count');
 
     expect(Number(label.textContent)).toBe(-1);
   });

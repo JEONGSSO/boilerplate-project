@@ -72,10 +72,8 @@ module.exports = (env, argv) => {
       ],
       devServer: {
         port: 3000,
-        overlay: {
-          warnings: false,
-          errors: false,
-        },
+        overlay: true,
+        historyApiFallback: true,
       },
       devtool: 'eval-cheap-module-source-map',
     };

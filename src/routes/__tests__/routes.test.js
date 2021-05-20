@@ -1,28 +1,20 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 
 import App from '@src/App';
 
-describe.skip('Routes Test', () => {
-  let mountedComponent;
+describe('Routes Test', () => {
+  it('input link click', () => {
+    render(<App />);
+    const LoginLinkElem = screen.getByText('login');
 
-  beforeEach(() => {
-    mountedComponent = render(<App />);
-  });
+    fireEvent.click(LoginLinkElem);
 
-  it('input link click', async () => {
-    const { getByTestId, queryByTestId } = mountedComponent;
+    const { pathname } = location;
+    expect(pathname).toBe('/login');
 
-    await waitFor(() => {
-      const value = getByTestId('nav-input');
-
-      fireEvent.click(value);
-
-      const { pathname } = location;
-      const input = queryByTestId('input');
-
-      expect(pathname).toBe('/input');
-      expect(input).toBeInTheDocument();
-    });
+    const emailInputElem =
+      screen.getByPlaceholderText('이메일을 입력해주세요.');
+    expect(emailInputElem).toBeInTheDocument();
   });
 });

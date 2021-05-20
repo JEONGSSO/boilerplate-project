@@ -1,11 +1,11 @@
-import { Input } from '@src/components/input';
+import { Login } from '@src/components/login';
 import { Counter } from '@src/components/counter';
 
 export default [
   {
-    name: 'input',
-    path: '/input',
-    component: Input,
+    name: 'login',
+    path: '/login',
+    component: Login,
   },
   {
     name: 'counter',

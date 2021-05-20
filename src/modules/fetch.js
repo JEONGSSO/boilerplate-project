@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 const fetchData = (url, options = {}) =>
   fetch(url, {
     ...options,

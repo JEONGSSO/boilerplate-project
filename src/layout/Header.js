@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+import routes from '@src/routes';
+
 export default () => {
   const match = useLocation();
   console.log('headerrrrrrrrrr match', match);
@@ -9,10 +11,11 @@ export default () => {
     <header>
       <h1>logo</h1>
       <nav>
-        <Link to="/input" data-testid="nav-input">
-          input
-        </Link>
-        <Link to="/counter">counter</Link>
+        {routes.map((route) => (
+          <Link to={route.path} key={route.name}>
+            {route.name}
+          </Link>
+        ))}
       </nav>
     </header>
   );

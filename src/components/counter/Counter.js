@@ -16,7 +16,7 @@ export default () => {
   return (
     <div>
       <button onClick={decrement}>-</button>
-      <label data-testid="value">{count}</label>
+      <span role="display-count">{count}</span>
       <button onClick={increment}>+</button>
     </div>
   );
